@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - CRUD</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                JavaScript - CRUD
+              </a>
+          
+            
+            </div>
+          </nav>
+    </header>
+    <main class='main-content'>
+        <div class="crud-container">
+            <div class="crud-header">
+                <h1>Contraseñas Guardadas</h1>
+                <button class="button is-success" id="openRegisterModel">
+                    <i class="fas fa-plus"></i>
+                    <span>Nueva Contraseña</span>
+                </button>
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Sitio Web</th>
+                    <th>Usuario</th>
+                    <th>Constraseña</th>
+                    <th>Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>web</td>
+                    <td>user</td>
+                    <td>password</td>
+                    <td>
+                        <button class="button is-warning">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button class="button is-danger">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                  </tr>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Añadir Nueva Contraseña</p>
+            <button class="delete" aria-label="close" id='closeRegisterModal'></button>
+          </header>
+          <section class="modal-card-body">
+              <form id="register-form">
+               <div class="field">
+                 <label class="label">Sitio Web</label>
+                 <div class="control">
+                   <input 
+                    class="input" 
+                    type="text" 
+                    name="sitioweb"
+                    placeholder="Agrega un Sitio Web"
+                   />
+                 </div>
+               </div>
+               <form class="field">
+                 <label class="label">Usuario</label>
+                 <div class="control">
+                   <input 
+                    class="input" 
+                    type="text" 
+                    name="user" 
+                    placeholder="Agregar Usuario"
+                   />
+                 </div>
+                 <div class="field">
+                   <label class="label">Contraseña</label>
+                   <div class="control">
+                     <input 
+                      class="input" 
+                      type="text" 
+                      name="pass" 
+                      placeholder="Agregar Contraseña"
+                     />
+                   </div>
+                 </div>
+           </section>
+           <footer class="modal-card-foot">
+             <button type="submit" class="button is-success">
+               <i class="fas fa-save"></i>
+               <span>Agregar</span>
+             </button>
+            </form>   
+           </footer>
+         </div>
+       </div>
+       <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+       <script src="js/app.js"></script>
+ </body>
+</html>
